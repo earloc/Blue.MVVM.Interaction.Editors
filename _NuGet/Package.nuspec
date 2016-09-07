@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Blue.MVVM.Interaction.Editors</id>
+    <version>0.1.0-pre10</version>
+    <title>Blue.MVVM.Editors</title>
+    <authors>earloc</authors>
+    <owners></owners>
+    <description>
+      MVVM&lt;BareKnuckleStyle&gt; - Interaction Editors
+    </description>
+    <releaseNotes>
+      - 0.1.0 - initial release
+    </releaseNotes>
+    <summary>
+    </summary>
+    <language>en-US</language>
+    <projectUrl>https://github.com/earloc/Blue.MVVM.Interaction.Editors</projectUrl>
+    <iconUrl>http://oi60.tinypic.com/wl6c7a.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright nobody in particular 2016</copyright>
+    <references></references>
+    <tags>Blue MVVM Interaction Editor</tags>
+    <dependencies>
+      <group>
+        <dependency id="Blue.MVVM.Commands" version="2.1.0-pre3" />
+        <dependency id="Blue.MVVM.Interaction" version="0.5.0-beta1" />
+        <dependency id="Blue.MVVM.Navigation" version="0.2.1-pre07" />
+        <dependency id="Blue.MVVM.Validation" version="0.2.0-pre01" />
+      </group>
+    </dependencies>
+    </metadata>
+  <files>
+    <!--<file src="bin\lib\net45\Blue.MVVM.*"
+          target="lib/net45" />
+    <file src="bin\lib\net46\Blue.MVVM.*"
+          target="lib/net46" />
+
+    <file src="bin\lib\uwp\Blue.MVVM.*"
+          target="lib/netcore45" />-->
+    
+    <file src="bin\lib\xamarinForms\Blue.MVVM.Interaction.Editors.*"
+              target="lib/monoandroid" />
+    
+    <file src="bin\lib\xamarinForms\Blue.MVVM.Interaction.Editors.*"
+              target="lib/monotouch" />
+    
+    <file src="bin\lib\xamarinForms\Blue.MVVM.Interaction.Editors.*"
+              target="lib/Xamarin.iOS" />
+    
+    <file src="bin\lib\xamarinForms\Blue.MVVM.Interaction.Editors.*"
+          target="lib/portable-net45+netcore45+wpa81+MonoAndroid+xamarinios+monotouch" />
+
+  </files>
+</package>

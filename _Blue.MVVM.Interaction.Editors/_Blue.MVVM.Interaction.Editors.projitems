@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>e617b92a-2a0c-45ae-aaba-200a2e5219d9</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>_Blue.MVVM.Interaction.Editors</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IStringEditorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScalarEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Editor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IScalarEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Properties\_AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IStringEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IScalarEditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StringEditorPageViewModel.cs" />
+  </ItemGroup>
+</Project>
