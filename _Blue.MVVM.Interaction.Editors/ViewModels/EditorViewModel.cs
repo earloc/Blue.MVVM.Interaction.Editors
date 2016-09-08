@@ -15,6 +15,18 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             SecondaryCommand = new Command(SecondaryCommand_Execute);
         }
 
+        public object Content {
+            get {
+                return Value;
+            }
+        }
+
+        public Type ContentType {
+            get {
+                return typeof(T);
+            }
+        }
+
         public T Value {
             get {
                 return _Value;

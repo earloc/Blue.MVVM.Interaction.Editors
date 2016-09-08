@@ -18,7 +18,6 @@ namespace Blue.MVVM.Interaction.Editors {
                 throw new ArgumentNullException(nameof(p), "must not be null");
 
             await _Navigator.TryShowModalAsync(p);
-
             var result = await p.GetResultAsync();
             await _Navigator.TryPopModalAsync();
             return result;
