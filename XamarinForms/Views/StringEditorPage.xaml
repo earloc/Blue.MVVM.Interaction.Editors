@@ -19,6 +19,5 @@
       <Button Text="Ok" Command="{Binding PrimaryCommand}"/>
       <Button Text="Cancel" Command="{Binding SecondaryCommand}"/>
     </StackLayout>
-    
   </Grid>
 </ContentPage>
