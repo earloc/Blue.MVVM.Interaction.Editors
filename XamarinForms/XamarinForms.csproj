@@ -38,7 +38,7 @@
     <DocumentationFile>bin\Release\Blue.MVVM.Interaction.Editors.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>..\Blue.snk</AssemblyOriginatorKeyFile>

@@ -13,7 +13,6 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         public EditorViewModel() {
             PrimaryCommand = new Command(PrimaryCommand_Execute, PrimaryCommand_CanExecute);
             SecondaryCommand = new Command(SecondaryCommand_Execute);
-
         }
 
         public object Content {
@@ -71,7 +70,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         private void Validatable_IsValidChanged(object sender, EventArgs e) {
             PrimaryCommand.NotifyCanExecuteChanged();
         }
-        
+
 
         private readonly TaskCompletionSource<T> _Result = new TaskCompletionSource<T>();
 
@@ -83,8 +82,21 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             return result;
         }
 
+        public string PrimaryCommandText {
+            get {
+                return _PrimaryCommandText;
+            }
+            set {
+                this.Set(ref _PrimaryCommandText, value);
+            }
+        }
+        private string _PrimaryCommandText = Settings.Default.PrimaryCommandText;
+
+
+
+
         public INotificationCommand PrimaryCommand { get; }
-        private void PrimaryCommand_Execute () {
+        private void PrimaryCommand_Execute() {
             _Result.SetResult(Value);
         }
 
@@ -92,6 +104,15 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             return IsValid && (Validatable?.IsValid ?? true);
         }
 
+        public string SecondaryCommandText {
+            get {
+                return _SecondaryCommandText;
+            }
+            set {
+                this.Set(ref _SecondaryCommandText, value);
+            }
+        }
+        private string _SecondaryCommandText = Settings.Default.SecondaryCommandText;
 
         public INotificationCommand SecondaryCommand { get; }
         private void SecondaryCommand_Execute() {

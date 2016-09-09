@@ -16,8 +16,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)IScalarEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\_AssemblyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IStringEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringEditor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)StringSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditorViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IScalarEditorViewModel.cs" />
