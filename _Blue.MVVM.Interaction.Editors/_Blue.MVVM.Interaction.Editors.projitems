@@ -19,7 +19,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)StringEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditorViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IScalarEditorViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StringEditorPageViewModel.cs" />
   </ItemGroup>

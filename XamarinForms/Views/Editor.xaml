@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.Editor"
+             BackgroundColor="Transparent"
+             Title="{Binding Title}">
+
+  <StackLayout x:Name="_Content" Margin="50" BackgroundColor="Black">
+      <StackLayout>
+        <ContentView x:Name="_ContentView"/>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+          <Button x:Name="_PrimaryButton" Text="Ok" Command="{Binding PrimaryCommand}"/>
+          <Button x:Name="_SecondaryButton" Text="Cancel" Command="{Binding SecondaryCommand}"/>
+        </StackLayout>
+      </StackLayout>
+  </StackLayout>
+</ContentPage>

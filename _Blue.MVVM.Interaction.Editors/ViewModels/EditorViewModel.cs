@@ -13,6 +13,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         public EditorViewModel() {
             PrimaryCommand = new Command(PrimaryCommand_Execute, PrimaryCommand_CanExecute);
             SecondaryCommand = new Command(SecondaryCommand_Execute);
+
         }
 
         public object Content {
@@ -88,7 +89,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         }
 
         private bool PrimaryCommand_CanExecute() {
-            return Validatable?.IsValid ?? true;
+            return IsValid && (Validatable?.IsValid ?? true);
         }
 
 

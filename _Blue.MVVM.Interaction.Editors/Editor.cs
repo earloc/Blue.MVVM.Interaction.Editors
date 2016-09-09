@@ -6,7 +6,7 @@ using Blue.MVVM.Interaction.Editors.ViewModels;
 using Blue.MVVM.Navigation;
 
 namespace Blue.MVVM.Interaction.Editors {
-    public abstract class Editor<T> : IEditor<T> {
+    public class Editor<T> : IEditor<T> {
         private readonly IModalNavigator _Navigator;
 
         public Editor(IModalNavigator navigator) {
