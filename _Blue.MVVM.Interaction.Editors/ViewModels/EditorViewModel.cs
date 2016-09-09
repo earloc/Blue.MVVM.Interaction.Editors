@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Blue.MVVM.Interaction.Editors.ViewModels {
-    public abstract class EditorViewModel<T> : IEditorViewModel<T>, IValidatable {
+    public abstract class EditorViewModel<T> : NotifyPropertyChangedBase, IEditorViewModel<T>, IValidatable {
 
         public EditorViewModel() {
             PrimaryCommand = new Command(PrimaryCommand_Execute, PrimaryCommand_CanExecute);
@@ -87,7 +87,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
                 return _PrimaryCommandText;
             }
             set {
-                this.Set(ref _PrimaryCommandText, value);
+                this.Set(ref _PrimaryCommandText, value, nameof(PrimaryCommandText));
             }
         }
         private string _PrimaryCommandText = Settings.Default.PrimaryCommandText;
@@ -109,7 +109,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
                 return _SecondaryCommandText;
             }
             set {
-                this.Set(ref _SecondaryCommandText, value);
+                this.Set(ref _SecondaryCommandText, value, nameof(SecondaryCommandText));
             }
         }
         private string _SecondaryCommandText = Settings.Default.SecondaryCommandText;
