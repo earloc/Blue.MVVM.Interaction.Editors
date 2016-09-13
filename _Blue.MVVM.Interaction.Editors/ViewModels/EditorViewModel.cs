@@ -92,9 +92,6 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         }
         private string _PrimaryCommandText = Settings.Default.PrimaryCommandText;
 
-
-
-
         public INotificationCommand PrimaryCommand { get; }
         private void PrimaryCommand_Execute() {
             _Result.SetResult(Value);
@@ -116,7 +113,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
 
         public INotificationCommand SecondaryCommand { get; }
         private void SecondaryCommand_Execute() {
-            _Result.SetResult(default(T));
+            _Result.TrySetResult(default(T));
         }
 
         private Dictionary<string, List<string>> _Errors = new Dictionary<string, List<string>>();

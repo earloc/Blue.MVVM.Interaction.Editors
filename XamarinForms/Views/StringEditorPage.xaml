@@ -4,11 +4,13 @@
              xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
              x:Class="Blue.MVVM.Interaction.Editors.Views.StringEditorPage"
           >
-    <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center">
+  <e:EditorPage.EditorContent>
+    <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center" HeightRequest="110" WidthRequest="330">
       <TableRoot>
         <TableSection Title="{Binding Title}">
           <EntryCell Label="{Binding Prompt}" Placeholder="{Binding Placeholder}" Text="{Binding Value}"/>
         </TableSection>
       </TableRoot>
     </TableView>
+  </e:EditorPage.EditorContent>
 </e:EditorPage>

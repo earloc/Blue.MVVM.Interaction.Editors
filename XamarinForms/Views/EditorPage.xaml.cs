@@ -12,12 +12,13 @@ using Blue.MVVM.IoC;
 using Blue.MVVM.Navigation.ViewLocators;
 
 namespace Blue.MVVM.Interaction.Editors.Views {
-    [ContentProperty(nameof(EditorContent))]
     [DefaultViewFor(typeof(EditorViewModel<>))]
     public abstract partial class EditorPage : ContentPage, INavigationAwareView {
 
         public EditorPage() {
             InitializeComponent();
+            _PrimaryButton.Clicked += _PrimaryButton_Clicked;
+            _SecondaryButton.Clicked += _SecondaryButton_Clicked;
         }
 
         public static readonly BindableProperty EditorContentProperty = BindableProperty.Create(nameof(EditorContent), typeof(View), typeof(Editor), null);
