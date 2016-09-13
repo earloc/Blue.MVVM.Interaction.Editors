@@ -18,9 +18,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)IStringEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)StringEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UriEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditorViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IScalarEditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ScalarEditorViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BoolEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\StringEditorPageViewModel.cs" />
   </ItemGroup>
 </Project>

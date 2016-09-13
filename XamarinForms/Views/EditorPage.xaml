@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Blue.MVVM.Interaction.Editors.Views.Editor"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.EditorPage"
              BackgroundColor="Transparent"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             x:Name="_This">
 
   <StackLayout x:Name="_Content" Margin="50" BackgroundColor="Black">
       <StackLayout>
-        <ContentView x:Name="_ContentView"/>
+        <ContentView Content="{Binding Source={x:Reference _This}, Path=EditorContent}"/>
         <Grid Grid.Row="1">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*"/>

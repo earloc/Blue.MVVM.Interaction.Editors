@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.BoolEditor"
+          >
+    <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center" HeightRequest="110" WidthRequest="330">
+      <TableRoot>
+        <TableSection Title="{Binding Title}">
+          <ViewCell>
+            <Label Text="{Binding Prompt}"/>
+          </ViewCell>
+        </TableSection>
+      </TableRoot>
+    </TableView>
+</ContentView>

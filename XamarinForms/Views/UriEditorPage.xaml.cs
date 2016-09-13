@@ -10,10 +10,10 @@ using Blue.MVVM.Navigation.ViewLocators;
 using Blue.MVVM.Interaction.Editors.ViewModels;
 
 namespace Blue.MVVM.Interaction.Editors.Views {
-    [DefaultViewFor(typeof(StringEditorPageViewModel))]
-    public partial class StringEditorPage : EditorPage {
+    [DefaultViewFor(typeof(UriEditorPageViewModel))]
+    public partial class UriEditorPage : EditorPage {
 
-        public StringEditorPage() {
+        public UriEditorPage() {
             InitializeComponent();
         }
     }

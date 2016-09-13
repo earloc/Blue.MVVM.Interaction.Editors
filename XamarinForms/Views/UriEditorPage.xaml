@@ -2,7 +2,7 @@
 <e:EditorPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
-             x:Class="Blue.MVVM.Interaction.Editors.Views.StringEditorPage"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.UriEditorPage"
           >
   <e:EditorPage.EditorContent>
     <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center">
