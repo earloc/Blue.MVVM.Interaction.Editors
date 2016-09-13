@@ -6,7 +6,7 @@ using Blue.MVVM.Interaction.Editors.ViewModels;
 using Blue.MVVM.Navigation;
 
 namespace Blue.MVVM.Interaction.Editors {
-    public abstract class ScalarEditor<T> : Editor<T>, IScalarEditor<T> {
+    public class ScalarEditor<T> : Editor<T>, IScalarEditor<T> {
 
         public ScalarEditor(IModalNavigator navigator) 
             : base(navigator) {
