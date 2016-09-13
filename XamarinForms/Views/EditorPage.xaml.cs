@@ -12,6 +12,7 @@ using Blue.MVVM.IoC;
 using Blue.MVVM.Navigation.ViewLocators;
 
 namespace Blue.MVVM.Interaction.Editors.Views {
+    [ContentProperty(nameof(EditorContent))]
     [DefaultViewFor(typeof(EditorViewModel<>))]
     public abstract partial class EditorPage : ContentPage, INavigationAwareView {
 
