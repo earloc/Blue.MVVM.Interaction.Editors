@@ -16,6 +16,10 @@ namespace Blue.MVVM.Interaction.Editors.Views {
     [DefaultViewFor(typeof(EditorViewModel<>))]
     public abstract partial class EditorPage : ContentPage, INavigationAwareView {
 
+        public EditorPage() {
+            InitializeComponent();
+        }
+
         public static readonly BindableProperty EditorContentProperty = BindableProperty.Create(nameof(EditorContent), typeof(View), typeof(Editor), null);
 
         public View EditorContent {
