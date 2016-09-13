@@ -4,7 +4,6 @@
              xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
              x:Class="Blue.MVVM.Interaction.Editors.Views.UriEditorPage"
           >
-  <e:EditorPage.EditorContent>
     <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center">
       <TableRoot>
         <TableSection Title="{Binding Title}">
@@ -12,5 +11,4 @@
         </TableSection>
       </TableRoot>
     </TableView>
-  </e:EditorPage.EditorContent>
 </e:EditorPage>
