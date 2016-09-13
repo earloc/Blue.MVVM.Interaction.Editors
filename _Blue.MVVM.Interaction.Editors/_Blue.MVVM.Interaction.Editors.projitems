@@ -9,7 +9,8 @@
     <Import_RootNamespace>_Blue.MVVM.Interaction.Editors</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)IStringEditorExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IBoolEditor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IUriEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScalarEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Editor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEditor.cs" />

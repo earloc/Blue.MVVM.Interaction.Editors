@@ -10,7 +10,7 @@ using Blue.MVVM.Navigation.ViewLocators;
 using Blue.MVVM.Interaction.Editors.ViewModels;
 
 namespace Blue.MVVM.Interaction.Editors.Views {
-    [DefaultViewFor(typeof(EditorViewModel<Uri>))]
+    [DefaultViewFor(typeof(BoolEditorPageViewModel))]
     public partial class BoolEditorPage : EditorPage {
         public BoolEditorPage() {
             InitializeComponent();

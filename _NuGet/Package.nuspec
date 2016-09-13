@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Blue.MVVM.Interaction.Editors</id>
-    <version>0.1.0-pre22</version>
+    <version>0.2.0-pre02</version>
     <title>Blue.MVVM.Editors</title>
     <authors>earloc</authors>
     <owners></owners>
@@ -10,6 +10,7 @@
       MVVM&lt;BareKnuckleStyle&gt; - Interaction Editors
     </description>
     <releaseNotes>
+      - 0.2.0 - added default editors for String, Boolean and Uri
       - 0.1.0 - initial release
     </releaseNotes>
     <summary>
