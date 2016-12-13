@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:EditorPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.PickerPage"
+             xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
+             BackgroundColor="Transparent"
+             Title="{Binding Title}"
+             x:Name="_This">
+  <e:EditorPage.EditorContent>
+    <ListView HasUnevenRows="true" ItemsSource="{Binding Context}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Horizontal">
+              <Switch IsToggled="{Binding IsSelected}" IsEnabled="{Binding IsSelectable}"></Switch>
+              <e:ItemControl x:Name="_Content" Item="{Binding Item}" ItemTemplate="{Binding Source={x:Reference _This}, Path=ItemTemplate}"/>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </e:EditorPage.EditorContent>
+</e:EditorPage>

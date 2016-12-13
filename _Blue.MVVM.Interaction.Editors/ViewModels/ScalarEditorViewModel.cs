@@ -16,9 +16,5 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         public string Title {
             get; set;
         }
-
-        protected override bool IsValidCore(T value) {
-            return true;
-        }
     }
 }

@@ -39,6 +39,7 @@ namespace Blue.MVVM.Interaction.Editors {
                 return null;
             var vm = new UriEditorPageViewModel() {
                 Value = value,
+                UriValue = value?.ToString(),
                 Title = title,
                 Prompt = prompt,
                 Placeholder = placeholder,

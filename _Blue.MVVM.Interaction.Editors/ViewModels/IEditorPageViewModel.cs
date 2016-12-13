@@ -5,12 +5,7 @@ using System.Threading.Tasks;
 
 namespace Blue.MVVM.Interaction.Editors.ViewModels {
 
-    public interface IEditorViewModel {
-        object Content { get; }
-        Type ContentType { get; }
-    }
-
-    public interface IEditorViewModel<T> : IEditorViewModel {
+    public interface IEditorViewModel<T> {
         T Value { get; set; }
 
         Task<T> GetResultAsync();

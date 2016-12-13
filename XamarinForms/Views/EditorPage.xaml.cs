@@ -17,6 +17,7 @@ namespace Blue.MVVM.Interaction.Editors.Views {
 
         public EditorPage() {
             InitializeComponent();
+            _Content.BackgroundColor = Device.OnPlatform(Color.White, Color.Black, Color.Black);
             _PrimaryButton.Clicked += _PrimaryButton_Clicked;
             _SecondaryButton.Clicked += _SecondaryButton_Clicked;
         }

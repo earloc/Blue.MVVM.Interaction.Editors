@@ -26,7 +26,17 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
                 return typeof(T);
             }
         }
-
+        private INotifyPropertyChanged _Notifiable;
+        private INotifyPropertyChanged Notifiable {
+            get {
+                return _Notifiable;
+            }
+            set {
+                Detach(_Notifiable);
+                _Notifiable = value;
+                Attach(_Notifiable);
+            }
+        }
         public T Value {
             get {
                 return _Value;
@@ -34,12 +44,15 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             set {
                 _Value = value;
                 Validatable = value as IValidatable;
+                Notifiable = value as INotifyPropertyChanged;
                 this.ValidatesWhen(IsValidCore(value));
                 PrimaryCommand.NotifyCanExecuteChanged();
             }
         }
 
-        protected abstract bool IsValidCore(T value);
+        protected virtual bool IsValidCore(T value) {
+            return true;
+        }
 
         private T _Value;
 
@@ -71,6 +84,23 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             PrimaryCommand.NotifyCanExecuteChanged();
         }
 
+        private void Attach(INotifyPropertyChanged notifiable) {
+            if (notifiable == null)
+                return;
+            notifiable.PropertyChanged += Notifiable_PropertyChanged;
+        }
+
+        private void Detach(INotifyPropertyChanged notifiable) {
+            if (notifiable == null)
+                return;
+            notifiable.PropertyChanged -= Notifiable_PropertyChanged;
+        }
+
+        private void Notifiable_PropertyChanged(object sender, EventArgs e) {
+            this.ValidatesWhen(IsValidCore(Value), nameof(Value));
+            PrimaryCommand.NotifyCanExecuteChanged();
+        }
+
 
         private readonly TaskCompletionSource<T> _Result = new TaskCompletionSource<T>();
 
@@ -79,6 +109,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
         public async Task<T> GetResultAsync() {
             var result = await _Result.Task;
             Detach(_Validatable);
+            Detach(_Notifiable);
             return result;
         }
 
@@ -126,6 +157,7 @@ namespace Blue.MVVM.Interaction.Editors.ViewModels {
             protected set {
                 _IsValid = value;
                 IsValidChanged?.Invoke(this, EventArgs.Empty);
+                PrimaryCommand.NotifyCanExecuteChanged();
             }
         }
 

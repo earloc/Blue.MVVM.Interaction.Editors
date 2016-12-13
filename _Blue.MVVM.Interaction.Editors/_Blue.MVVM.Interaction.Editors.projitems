@@ -9,12 +9,18 @@
     <Import_RootNamespace>_Blue.MVVM.Interaction.Editors</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)IPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Picker.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScalarEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Editor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IScalarEditor.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\_AssemblyInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Settings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IPickerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ISelectableViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PickerViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SelectableViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UriEditorPageViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\EditorViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\IEditorPageViewModel.cs" />

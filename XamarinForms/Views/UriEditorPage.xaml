@@ -8,7 +8,7 @@
     <TableView Intent="Form" Grid.Row="0" HasUnevenRows="True" VerticalOptions="Center" HeightRequest="110" WidthRequest="330">
       <TableRoot>
         <TableSection Title="{Binding Title}">
-          <EntryCell Label="{Binding Prompt}" Placeholder="{Binding Placeholder}" Text="{Binding Value}"/>
+          <EntryCell Label="{Binding Prompt}" Placeholder="{Binding Placeholder}" Text="{Binding UriValue}" Keyboard="Url"/>
         </TableSection>
       </TableRoot>
     </TableView>

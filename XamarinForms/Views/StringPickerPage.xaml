@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<e:PickerPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:e="clr-namespace:Blue.MVVM.Interaction.Editors.Views"
+             x:Class="Blue.MVVM.Interaction.Editors.Views.StringPickerPage">
+  <e:PickerPage.ItemTemplate>
+    <DataTemplate>
+        <Label Text="{Binding}"/>
+    </DataTemplate>
+  </e:PickerPage.ItemTemplate>
+</e:PickerPage>
